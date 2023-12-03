@@ -1,0 +1,28 @@
+
+
+
+Started Working on System Workbench(eclipse):
+
+Started working on system workbench.We use this software to program boards and microcontrollers of stm32 family(i.e nucleo , bluepill).
+I looked for proper tutorials and examples to get started for system workbench but could not find any.Since according to my mentor google and chatgpt are 
+your best friends so from there I learnt how to create a project and set debug configuration etc.
+
+
+
+
+Testing BME280 (temperature and humidity sensor):
+
+
+I got code for testing this sensor from open source (i.e Github).I got a few errors while compiling and debugguing this code on system workbench.
+A few are :
+
+1-Setting proper Header files:
+The code i copied was for another board and i was using bluepill(F103C8T6),so the files used in this code was notg for bluepill.I got an issue of wrongheader file 
+I was using stm32f0xx_hal.h headers while hal library for bluepill is stm32f1xx_hal.Which i changed.
+
+2-Wrong IDcode :
+During debugging i got and error of wrong idcode (clone:0x1ba01477 & original:0x2ba01477).Changed this ID code in the file on folllowing path due to which it started working:
+:
+D:\System Workbench\plugins\fr.ac6.mcu.debug_2.5.0.201904120827\resources\openocd\st_scripts\target\stm32f1x
+
+In this file i just changed idcode from 0x1ba01477 to 0x2ba01477.It started working.
