@@ -1,0 +1,10 @@
+
+
+
+Tesgtin T3 display (lilygo kit esp32):
+
+Tested this code using arduino IDE.I found all details for setup from open source.
+
+
+Tested MPU6050:
+I also tested MPU6050 motion sensor with arduino UNO using arduino IDE.I got its code from open source.
